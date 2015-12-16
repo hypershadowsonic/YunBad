@@ -16,4 +16,5 @@
         android:id="@+id/mapview"
         android:scaleType="matrix" />
 
+
 </RelativeLayout>
