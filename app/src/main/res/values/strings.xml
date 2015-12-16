@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">雲科小壞壞</string>
+    <string name="action_settings">設定</string>
+    <string name="title_activity_hot">HotActivity</string>
+</resources>
