@@ -1,5 +1,6 @@
 package tw.edu.yuntech.yunbad;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -82,6 +83,7 @@ public class Main extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            startActivity(new Intent(Main.this,SettingsActivity.class));
             return true;
         }
 
@@ -141,7 +143,7 @@ public class Main extends AppCompatActivity {
                 case 0:
                     return new MapActivityFragment();
                 case 1:
-                    return new MapActivityFragment();
+                    return new HotFm();
                 case 2:
                     return new MapActivityFragment();
             }
