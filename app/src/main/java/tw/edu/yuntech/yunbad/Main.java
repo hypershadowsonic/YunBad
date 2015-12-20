@@ -144,7 +144,7 @@ public class Main extends AppCompatActivity {
                 case 1:
                     return new HotFm();
                 case 2:
-                    return new MapActivityFragment();
+                    return new PersonalFm();
             }
             return null;
         }

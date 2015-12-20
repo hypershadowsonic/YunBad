@@ -1,13 +1,7 @@
 package tw.edu.yuntech.yunbad;
 
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.view.menu.MenuView;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,15 +10,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Super_000 on 12/16/2015.
  */
 
-public class HotFm extends Fragment{
-    public HotFm(){}
+public class PersonalFm extends Fragment{
+    public PersonalFm(){}
 
     TextView C1Name;
     TextView C1Date;
@@ -40,17 +31,12 @@ public class HotFm extends Fragment{
     ImageView C2Photo;
     ImageButton C2Plus;
 
-    TextView C3Name;
-    TextView C3Date;
-    TextView C3St;
-    TextView C3Lo;
-    ImageView C3Photo;
-    ImageButton C3Plus;
+
 
     /*@Nullable*/
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.hot_list_cv, container,    false);
+        View rootView = inflater.inflate(R.layout.personal_list_cv, container,    false);
         C1Name = (TextView)rootView.findViewById(R.id.c1_name);
         C1Date = (TextView)rootView.findViewById(R.id.c1_date);
         C1St = (TextView)rootView.findViewById(R.id.c1_status);
@@ -77,24 +63,13 @@ public class HotFm extends Fragment{
         C2Lo.setText("設計三館三樓");
         C2Photo.setImageResource(R.drawable.fluorescent);
 
-        C3Name = (TextView)rootView.findViewById(R.id.c3_name);
-        C3Date = (TextView)rootView.findViewById(R.id.c3_date);
-        C3St = (TextView)rootView.findViewById(R.id.c3_status);
-        C3Lo = (TextView)rootView.findViewById(R.id.c3_locate);
-        C3Photo = (ImageView)rootView.findViewById(R.id.c3_photo);
 
-        C3Name.setText("椅子");
-        C3Date.setText("2015/11/02");
-        C3St.setText("椅腳斷裂");
-        C3Lo.setText("管理三館");
-        C3Photo.setImageResource(R.drawable.chair);
 
         C1Plus = (ImageButton)rootView.findViewById(R.id.c1_plus);
         C1Plus.setImageResource(R.drawable.plusone_01);
         C2Plus = (ImageButton)rootView.findViewById(R.id.c2_plus);
         C2Plus.setImageResource(R.drawable.plusone_01);
-        C3Plus = (ImageButton)rootView.findViewById(R.id.c3_plus);
-        C3Plus.setImageResource(R.drawable.plusone_01);
+
 
         C1Plus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,12 +86,6 @@ public class HotFm extends Fragment{
             }
         });
 
-        C3Plus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(), R.string.plus, Toast.LENGTH_SHORT).show();
-            }
-        });
         return rootView;
     }
 
